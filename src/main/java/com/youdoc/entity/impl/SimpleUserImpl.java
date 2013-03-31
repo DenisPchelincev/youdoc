@@ -17,7 +17,6 @@ import com.youdoc.entity.User;
 @Entity
 @Table(name = "T_SIMPLEUSER")
 public class SimpleUserImpl implements User  {
-
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int pid;
@@ -26,6 +25,19 @@ public class SimpleUserImpl implements User  {
 	private String password;
 	private String email;
 
+	/**
+	 * Создает пользователя.
+	 * @param login
+	 * @param password
+	 * @param email
+	 */
+	public SimpleUserImpl(String login, String password, String email) {
+		super();
+		this.login = login;
+		this.password = password;
+		this.email = email;
+	}
+	
 	/**
 	 * @return the pid
 	 */

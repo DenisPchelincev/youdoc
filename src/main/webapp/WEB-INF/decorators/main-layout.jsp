@@ -1,17 +1,16 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://www.opensymphony.com/sitemesh/decorator" prefix="decorator"%>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
 <title>Spring-MVC-Showcase</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="">
 <meta name="author" content="">
 <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
-<link href="<c:url value="/resources/css/bootstrap.min.css" />" rel="stylesheet" type="text/css" />
-<link href="<c:url value="/resources/css/bootstrap-responsive.min.css" />" rel="stylesheet" type="text/css" />
 
 <style type="text/css">
 body {
@@ -27,7 +26,7 @@ body {
 <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
 <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-  <![endif]-->
+<![endif]-->
 
 </head>
 
@@ -69,9 +68,7 @@ body {
 
 	<!-- Placed at the end of the document so the pages load faster -->
 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<%--	<script type="text/javascript" src="<c:url value="/resources/js/jquery-1.8.0-min.js" />"></script> --%>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
-<%-- 	<script type="text/javascript"  src="<c:url value="/resources/js/bootstrap.min.js" />"></script> --%>
 	<script type="text/javascript" src="<c:url value="/resources/js/demo.js" />"></script>
 	<script type="text/javascript" src="<c:url value="/resources/js/json2.js" />"></script>
 	<script type="text/javascript" src="<c:url value="/resources/js/date.format.js" />"></script>

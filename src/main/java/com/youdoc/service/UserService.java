@@ -30,7 +30,7 @@ public class UserService {
 	 */
 	@Transactional(readOnly = false)
 	public void addUser(User user) {
-		Session session = sessionFactory.openSession();
+		Session session = sessionFactory.getCurrentSession();
 		session.save(user);
 		session.close();
 	}
