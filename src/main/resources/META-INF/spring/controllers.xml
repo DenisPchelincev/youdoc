@@ -16,4 +16,7 @@
 	<mvc:view-controller path="/misc" view-name="misc" />
 	<mvc:view-controller path="/faq" view-name="faq" />
 
+	<mvc:view-controller path="/login" view-name="login" />
+	<mvc:view-controller path="/logout" view-name="welcome" />
+	<mvc:view-controller path="/welcome" view-name="welcome" />
 </beans>

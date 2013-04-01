@@ -85,6 +85,11 @@
 			<artifactId>spring-security-config</artifactId>
 			<version>${springsecurity.version}</version>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-taglibs</artifactId>
+			<version>${springsecurity.version}</version>
+		</dependency>
 
 		<!-- hibernate -->
 		<dependency>
@@ -399,10 +404,10 @@
 		</plugins>
 		<!-- Configuration which allows configuration files (such as xml files) 
 			to be placed in the same folder as java files -->
-<!-- 		<resources> -->
-<!-- 			<resource> -->
-<!-- 				<directory>${basedir}/src/main/java/</directory> -->
-<!-- 			</resource> -->
-<!-- 		</resources> -->
+		<!-- <resources> -->
+		<!-- <resource> -->
+		<!-- <directory>${basedir}/src/main/java/</directory> -->
+		<!-- </resource> -->
+		<!-- </resources> -->
 	</build>
 </project>
