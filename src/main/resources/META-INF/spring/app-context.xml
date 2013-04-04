@@ -9,7 +9,9 @@
                            http://www.springframework.org/schema/aop  http://www.springframework.org/schema/aop/spring-aop-3.1.xsd">
 
 	<context:annotation-config />
-	<context:component-scan base-package="com.youdoc" />
+	<context:component-scan base-package="com.youdoc.service" />
+
+	<bean id="initContextService" class="com.youdoc.service.InitContextService" />
 
 	<import resource="hibernate-context.xml" />
 </beans>
