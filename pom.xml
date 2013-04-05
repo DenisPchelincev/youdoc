@@ -16,6 +16,7 @@
 		<hibernate.version>4.1.10.Final</hibernate.version>
 		<hsqldb.version>2.2.9</hsqldb.version>
 		<junit.version>4.11</junit.version>
+		<postgres.version>9.1-901.jdbc4</postgres.version>
 	</properties>
 
 	<dependencies>
@@ -127,6 +128,11 @@
 			<artifactId>hsqldb</artifactId>
 			<version>${hsqldb.version}</version>
 			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<version>${postgres.version}</version>
 		</dependency>
 
 		<!-- Logging -->

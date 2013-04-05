@@ -14,26 +14,17 @@
 	<bean id="transactionManager"
 		class="org.springframework.orm.hibernate4.HibernateTransactionManager"
 		p:sessionFactory-ref="sessionFactory" />
-	
+
 	<bean id="sessionFactory"
 		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean"
-		p:dataSource-ref="dataSource" p:packagesToScan="com.youdoc.entity" p:configLocation="${hibernate.config}"/>
-		
+		p:dataSource-ref="dataSource" p:packagesToScan="com.youdoc.entity"
+		p:configLocation="${hibernate.config}" />
+
 	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
-		destroy-method="close">
-		<property name="driverClass" value="${database.driverClassName}" />
-		<property name="jdbcUrl" value="${database.url}" />
-		<property name="user" value="${database.username}" />
-		<property name="password" value="${database.password}" />
-		<property name="initialPoolSize" value="3" />
-		<property name="minPoolSize" value="3" />
-		<property name="maxPoolSize" value="50" />
-		<property name="idleConnectionTestPeriod" value="200" />
-		<property name="acquireIncrement" value="1" />
-		<!-- 0 means: statement caching is turned off. -->
-		<property name="maxStatements" value="0" />
-		<!-- 3 is default -->
-		<property name="numHelperThreads" value="3" />
-	</bean>
+		destroy-method="close" p:driverClass="${database.driverClassName}"
+		p:jdbcUrl="${database.url}" p:user="${database.username}" p:password="${database.password}"
+		p:initialPoolSize="3" p:minPoolSize="3" p:maxPoolSize="50"
+		p:idleConnectionTestPeriod="200" p:acquireIncrement="1"
+		p:maxStatements="0" p:numHelperThreads="3" />
 
 </beans>

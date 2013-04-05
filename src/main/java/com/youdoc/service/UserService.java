@@ -22,6 +22,7 @@ import com.youdoc.entity.impl.UserEntity;
  * 
  */
 @Service
+@Transactional(readOnly = false)
 public class UserService {
 	protected static final Logger log = LoggerFactory.getLogger(UserService.class);
 
@@ -41,12 +42,9 @@ public class UserService {
 	 * 
 	 * @param user
 	 */
-	@Transactional(readOnly = false)
 	public void addUser(UserEntity user) {
 		Session session = sessionFactory.getCurrentSession();
 		session.save(user);
-		session.flush();
-		//session.close();
 	}
 
 	/**
@@ -55,11 +53,10 @@ public class UserService {
 	 * @param name
 	 * @return
 	 */
-	@Transactional(readOnly = true)
 	public UserEntity getUserByName(String name) {
 		Session session = sessionFactory.getCurrentSession();
 		Criteria c = session.createCriteria(UserEntity.class);
-		List list = c.add(Restrictions.ilike("username", name, MatchMode.EXACT)).list();
+		List<?> list = c.add(Restrictions.ilike("username", name, MatchMode.EXACT)).list();
 		return (UserEntity) (list.size() > 0 ? list.get(0) : null);
 	}
 }
