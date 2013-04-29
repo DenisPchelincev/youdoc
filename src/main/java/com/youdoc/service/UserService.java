@@ -19,7 +19,6 @@ import com.youdoc.entity.impl.UserEntity;
  * Сервис для User.
  * 
  * @author sezam
- * 
  */
 @Service
 @Transactional(readOnly = false)
